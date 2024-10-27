@@ -34,6 +34,8 @@ button{
   padding: 6px;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 .bgChanged{
 background-color: rgba(16, 15, 15, 0.893);
@@ -45,4 +47,17 @@ transition: all 0.3s ease-in-out;
 }
 .bgChanged h2{
   color: rgba(239, 226, 226, 0.914);
+}
+.class1{
+  color: red;
+  font-size: larger;
+  font-weight: 500;
+}
+.class2{
+  color: rgb(255, 68, 0);
+  font-size: 40px;
+  font-weight: 800;
+}
+div{
+  margin: 10px;
 }

@@ -185,71 +185,91 @@ MyButton.addEventListener("click", () => {
 });
 
 //answer 14
-function largestName(arr){
-  let largest=""
-  arr.forEach((element)=>{
-    if(element.length>largest.length){
-      largest=element
+function largestName(arr) {
+  let largest = "";
+  arr.forEach((element) => {
+    if (element.length > largest.length) {
+      largest = element;
     }
-  })
+  });
   return largest;
 }
 let p14 = document.getElementById("answer14");
-p14.innerHTML = `Original Arrayis: ${names} <br/> while largest name in my array is: ${largestName(names)}`;
+p14.innerHTML = `Original Arrayis: ${names} <br/> while largest name in my array is: ${largestName(
+  names
+)}`;
 
 //answer15
-function findStartWithLetter(arr,letter){
-  let lowerLetter=letter.toLowerCase();
+function findStartWithLetter(arr, letter) {
+  let lowerLetter = letter.toLowerCase();
   return arr.filter((name) => {
     return name.toLowerCase().startsWith(lowerLetter);
-});
+  });
 }
 let p15 = document.getElementById("answer15");
-let MylowerLetter="A";
-p15.innerHTML = `Original Arrayis: ${names} <br/> while the names starts with letter  A: ${findStartWithLetter(names,MylowerLetter)}`;
+let MylowerLetter = "A";
+p15.innerHTML = `Original Arrayis: ${names} <br/> while the names starts with letter  A: ${findStartWithLetter(
+  names,
+  MylowerLetter
+)}`;
 
 //answer 16
 function toUpperCaseElement(arr) {
-  return arr.map(element => element.toUpperCase()); 
-}let p16 = document.getElementById("answer16");
+  return arr.map((element) => element.toUpperCase());
+}
+let p16 = document.getElementById("answer16");
 
-p16.innerHTML = `Original Array is: ${names.join(', ')} <br/> While the names converted to uppercase we have: ${toUpperCaseElement(names).join(', ')}`;
+p16.innerHTML = `Original Array is: ${names.join(
+  ", "
+)} <br/> While the names converted to uppercase we have: ${toUpperCaseElement(
+  names
+).join(", ")}`;
 
 //anzswer 17
 function removeName(arr, nameToRemove) {
-  return arr.filter(name => name !== nameToRemove); // Create a new array excluding the specified name
+  return arr.filter((name) => name !== nameToRemove); // Create a new array excluding the specified name
 }
 let p17 = document.getElementById("answer17");
 const nameToRemove = "Alice";
-p17.innerHTML = `Original Array is: ${names.join(', ')} <br/> Array after removing: ${removeName(names, nameToRemove)}`;
+p17.innerHTML = `Original Array is: ${names.join(
+  ", "
+)} <br/> Array after removing: ${removeName(names, nameToRemove)}`;
 
 //answer 18
 function countNamesWithLetterA(arr) {
-  return arr.filter((name)=>name.toLowerCase().includes("a")).length;
+  return arr.filter((name) => name.toLowerCase().includes("a")).length;
 }
 let p18 = document.getElementById("answer18");
-p18.innerHTML = `Original Array is: ${names.join(', ')} <br/>Number of names containing the letter 'a': ${countNamesWithLetterA(names)}`;
+p18.innerHTML = `Original Array is: ${names.join(
+  ", "
+)} <br/>Number of names containing the letter 'a': ${countNamesWithLetterA(
+  names
+)}`;
 
 //answer 19
-function JoinArray(arr){
+function JoinArray(arr) {
   return arr.join("_");
 }
 let p19 = document.getElementById("answer19");
-p19.innerHTML = `Original Array is: ${names} <br/>Array after joinned: ${JoinArray(names)}`;
+p19.innerHTML = `Original Array is: ${names} <br/>Array after joinned: ${JoinArray(
+  names
+)}`;
 
 //answer 20
-function reverseArray(arr){
-  return arr.reverse().join(",")
+function reverseArray(arr) {
+  return arr.reverse().join(",");
 }
 let p20 = document.getElementById("answer20");
-p20.innerHTML = `Original Array is: ${names} <br/>Array after Reversed: ${reverseArray(names)}`;
+p20.innerHTML = `Original Array is: ${names} <br/>Array after Reversed: ${reverseArray(
+  names
+)}`;
 
 //answer 21
-const person={
-  name:"Bosco",
-  age:"25",
-  occupation:"Software Developer"
-}
+const person = {
+  name: "Bosco",
+  age: "25",
+  occupation: "Software Developer",
+};
 let p21 = document.getElementById("answer21");
 p21.innerHTML = `Here with objects:<br/> name:${person.name}<br/> age:${person.age}<br/>Occupation: ${person.occupation}`;
 
@@ -264,22 +284,26 @@ p22.innerHTML = `The fomoated data is: ${formatPersonInfo(person)}`;
 function addProperty(obj, propertyName, value) {
   obj[propertyName] = value; // Add the new property
 }
-addProperty(person, 'hobby', 'Reading');
+addProperty(person, "hobby", "Reading");
 let p23 = document.getElementById("answer23");
-p23.innerHTML = `The Initial data is: ${formatPersonInfo(person)} and when you addProperty:name:${person.name} Age: ${person.age}, Occupation: ${person.occupation} Hobby:${person.hobby} `;
+p23.innerHTML = `The Initial data is: ${formatPersonInfo(
+  person
+)} and when you addProperty:name:${person.name} Age: ${
+  person.age
+}, Occupation: ${person.occupation} Hobby:${person.hobby} `;
 
 //answer 24
 function removeProperty(obj, propertyName) {
-  delete obj[propertyName]; 
+  delete obj[propertyName];
 }
 const person1 = {
   name: "Alice",
   age: 30,
   occupation: "Software Developer",
-  hobby: "Reading"
+  hobby: "Reading",
 };
 
-removeProperty(person1,"hobby") 
+removeProperty(person1, "hobby");
 let p24 = document.getElementById("answer24");
 p24.innerHTML = `The Initial data is:Name: ${person1.name}, Age: ${person1.age}, Occupation: ${person1.occupation}, Hobby: ${person1.hobby} <br/> when you addProperty:name:${person1.name} Age: ${person1.age}, Occupation: ${person1.occupation}`;
 
@@ -288,36 +312,43 @@ function listPropertiesAndValues(obj) {
   return Object.entries(obj).map(([key, value]) => `${key}: ${value}`);
 }
 let p25 = document.getElementById("answer25");
-p25.innerHTML = `The properties of object and their values: ${listPropertiesAndValues(person1)}`;
+p25.innerHTML = `The properties of object and their values: ${listPropertiesAndValues(
+  person1
+)}`;
 
 //answer 26
-function MergeObject(obj1,obj2){
-  return {...obj1,...obj2}
+function MergeObject(obj1, obj2) {
+  return { ...obj1, ...obj2 };
 }
 function listPropertiesAndValues(obj) {
   return Object.entries(obj)
-      .map(([key, value]) => `${key}: ${value}`)
-      .join(', ');
+    .map(([key, value]) => `${key}: ${value}`)
+    .join(", ");
 }
 const person2 = {
   Country: "Rwanda",
-  location: "New York"
+  location: "New York",
 };
 const mergedPerson = MergeObject(person1, person2);
 
 let p26 = document.getElementById("answer26");
-p26.innerHTML = `The properties of the merged object and their values: ${listPropertiesAndValues(mergedPerson)}`;
+p26.innerHTML = `The properties of the merged object and their values: ${listPropertiesAndValues(
+  mergedPerson
+)}`;
 
 //answer 27
-function propertyIsExist(obj,property){
-  return obj.hasOwnProperty(property)
+function propertyIsExist(obj, property) {
+  return obj.hasOwnProperty(property);
 }
 let p27 = document.getElementById("answer27");
-p27.innerHTML = `is person has the property of name?!<br/> ${propertyIsExist(person,"name")}`;
+p27.innerHTML = `is person has the property of name?!<br/> ${propertyIsExist(
+  person,
+  "name"
+)}`;
 
 //answer 28
-function cloneObject(obj){
-  return JSON.parse(JSON.stringify(obj))
+function cloneObject(obj) {
+  return JSON.parse(JSON.stringify(obj));
 }
 const original = { name: "Alice", age: 25, location: { city: "New York" } };
 const clone = cloneObject(original);
@@ -328,24 +359,23 @@ let p28 = document.getElementById("answer28");
 p28.innerHTML = `object after cloned: ${original.location.city}`;
 
 //answer 29
-function printProperty(array,property){
-  let results=""
-  array.forEach((obj)=>{
-    if(obj.hasOwnProperty(property)){
-      results+=obj[property]+'<br/>'
-    }else
-    results+=`Property "${property}" not found in object`, obj
-    })
-  return results
+function printProperty(array, property) {
+  let results = "";
+  array.forEach((obj) => {
+    if (obj.hasOwnProperty(property)) {
+      results += obj[property] + "<br/>";
+    } else (results += `Property "${property}" not found in object`), obj;
+  });
+  return results;
 }
 const people = [
   { name: "Alice", age: 25 },
   { name: "Bob", age: 30 },
-  { name: "Charlie", age: 35 }
+  { name: "Charlie", age: 35 },
 ];
 
 let p29 = document.getElementById("answer29");
-p29.innerHTML = `${printProperty(people,"name")}`;
+p29.innerHTML = `${printProperty(people, "name")}`;
 
 //answer 30
 function updateProperty(obj, property, newValue) {
@@ -367,114 +397,215 @@ function handleUpdate() {
 }
 
 // answer 31
-function reverseString(str){
-  return str.split('').reverse().join('');
+function reverseString(str) {
+  return str.split("").reverse().join("");
 }
-let string1="Dusengimana"
+let string1 = "Dusengimana";
 
 let p31 = document.getElementById("answer31");
-p31.innerHTML = `orginal string:"${string1}" after reversed we have<br/> ${reverseString(string1)}`;
+p31.innerHTML = `orginal string:"${string1}" after reversed we have<br/> ${reverseString(
+  string1
+)}`;
 
 //answer 32
-function countVowel(str){
-  let vowel="aeiuoAUIEO";
-  let count=0;
-  for (let char of str){
-    if(vowel.includes(char)){
-      count+=1
+function countVowel(str) {
+  let vowel = "aeiuoAUIEO";
+  let count = 0;
+  for (let char of str) {
+    if (vowel.includes(char)) {
+      count += 1;
     }
   }
   return count;
 }
 let p32 = document.getElementById("answer32");
-p32.innerHTML = `orginal string:"${string1}" <br/> number of vowel in my string: ${countVowel(string1)}`;
+p32.innerHTML = `orginal string:"${string1}" <br/> number of vowel in my string: ${countVowel(
+  string1
+)}`;
 
 //answer 33
-function ToUpperCase(str){
+function ToUpperCase(str) {
   return str.toUpperCase();
 }
 let p33 = document.getElementById("answer33");
-p33.innerHTML = `orginal string:"${string1}" <br/> my string in uppercase: ${ToUpperCase(string1)}`;
+p33.innerHTML = `orginal string:"${string1}" <br/> my string in uppercase: ${ToUpperCase(
+  string1
+)}`;
 
 //answer 34
-function findLength(str){
-  let count=0;
-  for(let char of str){
-    count++
+function findLength(str) {
+  let count = 0;
+  for (let char of str) {
+    count++;
   }
-  return count
+  return count;
 }
 let p34 = document.getElementById("answer34");
-p34.innerHTML = `orginal string:"${string1}" <br/>the length of my string without using length method: ${findLength(string1)}`;
+p34.innerHTML = `orginal string:"${string1}" <br/>the length of my string without using length method: ${findLength(
+  string1
+)}`;
 
 //answer 35
-function replaceSpace(str){
-  return str.split(' ').join("-")
+function replaceSpace(str) {
+  return str.split(" ").join("-");
 }
-let string2="Hello my people"
+let string2 = "Hello my people";
 let p35 = document.getElementById("answer35");
-p35.innerHTML = `orginal string:"${string2}" <br/>after string joinned a hyphens: ${replaceSpace(string2)}`;
-
+p35.innerHTML = `orginal string:"${string2}" <br/>after string joinned a hyphens: ${replaceSpace(
+  string2
+)}`;
 
 //answer 36
-function first10charcter(str){
-  return str.slice(0,10)
+function first10charcter(str) {
+  return str.slice(0, 10);
 }
 let p36 = document.getElementById("answer36");
-p36.innerHTML = `orginal string:"${string2}" <br/> extract frist 10 character: ${first10charcter(string2)}`;
+p36.innerHTML = `orginal string:"${string2}" <br/> extract frist 10 character: ${first10charcter(
+  string2
+)}`;
 
 //answer 37
-function replaceWord(str,wordTofind,newWord){
-  const regx= new RegExp(`\\b${wordTofind}`,'g')
-  return str.replace(regx,newWord)
+function replaceWord(str, wordTofind, newWord) {
+  const regx = new RegExp(`\\b${wordTofind}`, "g");
+  return str.replace(regx, newWord);
 }
 let p37 = document.getElementById("answer37");
-p37.innerHTML = `orginal string:"${string2}" <br/> replace people by friends: ${replaceWord(string2,"people","friends")}`;
+p37.innerHTML = `orginal string:"${string2}" <br/> replace people by friends: ${replaceWord(
+  string2,
+  "people",
+  "friends"
+)}`;
 
 //answer 8
-function SplitString(str){
-  return str.split('')
+function SplitString(str) {
+  return str.split("");
 }
 let p38 = document.getElementById("answer38");
-p38.innerHTML = `orginal string:"${string2}" <br/> the string splited in array : ${SplitString(string2)}`;
+p38.innerHTML = `orginal string:"${string2}" <br/> the string splited in array : ${SplitString(
+  string2
+)}`;
 
 //answer 39
-function removeNumbers(str){
-  return str.replace(/\d+/g, '');
+function removeNumbers(str) {
+  return str.replace(/\d+/g, "");
 }
-let string3="Hello123 World45! This is 2024.";
+let string3 = "Hello123 World45! This is 2024.";
 let p39 = document.getElementById("answer39");
-p39.innerHTML = `orginal string:"${string3}" <br/> string after remove a numbers : ${removeNumbers(string3)}`;
+p39.innerHTML = `orginal string:"${string3}" <br/> string after remove a numbers : ${removeNumbers(
+  string3
+)}`;
 
 //answer 40
-function insertString(str,newstr,position){
-  if(position>str.length){
-    position=str.length
+function insertString(str, newstr, position) {
+  if (position > str.length) {
+    position = str.length;
   }
-  return str.slice(0,position)+newstr+str.slice(position)
+  return str.slice(0, position) + newstr + str.slice(position);
 }
 
 let p40 = document.getElementById("answer40");
-p40.innerHTML = `orginal string:"${string1}" <br/> insert some string on position of 7 : ${insertString(string1,"kigali",7)}`;
+p40.innerHTML = `orginal string:"${string1}" <br/> insert some string on position of 7 : ${insertString(
+  string1,
+  "kigali",
+  7
+)}`;
 
 //answer 41
-function changeBg(){
-  const bodyEl=document.body;
-  bodyEl.classList.toggle("bgChanged")
+function changeBg() {
+  const bodyEl = document.body;
+  bodyEl.classList.toggle("bgChanged");
 }
 //answer 42
-function HideName(name){
-  name.style.display="none";
+function HideName(name) {
+  name.style.display = "none";
 }
-const p42=document.querySelector(".name")
-function handleHide(){
-  HideName(p42)
+const p42 = document.querySelector(".name");
+function handleHide() {
+  HideName(p42);
 }
 
 //answer 43
 
-function appPragraph(){
-  const pragraph=document.createElement('p')
-  pragraph.textContent="This is new pragraph added"
-  document.querySelector('.receiveChild').appendChild(pragraph)
+function appPragraph() {
+  const pragraph = document.createElement("p");
+  pragraph.textContent = "This is new pragraph added";
+  document.querySelector(".receiveChild").appendChild(pragraph);
+}
+// answer 44
+function clearListItems() {
+  const ulEl = document.getElementById("myUl");
+  while (ulEl.firstChild) {
+    ulEl.removeChild(ulEl.firstChild);
+  }
+}
+
+//answer 45
+function changeContent(element) {
+  return (element.innerHTML =
+    "The content of this element was changed by click");
+}
+//answer 46
+function taggleClass(element, newclass) {
+  return element.classList.toggle(newclass);
+}
+
+//answer 47
+function countDivs() {
+  let divs = document.querySelectorAll("div");
+  return divs.length;
+}
+function showNumber() {
+  document.getElementById(
+    "length"
+  ).innerHTML = `the number od Div is: ${countDivs()}`;
+}
+//answer 48
+function inputValues(input, buttonEl, pEl) {
+  buttonEl.addEventListener("click", () => {
+    pEl.innerHTML = `${input.value}`;
+    input.value = "";
+  });
+}
+inputValues(
+  document.getElementById("myInput"),
+  document.getElementById("okk"),
+  document.getElementById("answer48")
+);
+
+//answer 49
+function createTable() {
+  const table = document.createElement("table");
+  table.style.borderCollapse = "collapse";
+  const numbers = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+  ];
+
+  for (let i = 0; i < 3; i++) {
+    const row = document.createElement("tr");
+    for (let j = 0; j < 3; j++) {
+      const cell = document.createElement("td");
+      cell.innerText = numbers[i][j]; // Set cell content
+      cell.style.border = "1px solid black"; // Add border for visibility
+      cell.style.padding = "10px";
+      row.appendChild(cell);
+    }
+    table.appendChild(row);
+  }
+
+  document.getElementById("answer49").appendChild(table);
+}
+//answer 50
+function validateForm() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  if (!name || !email || !password) {
+    alert("Please fill out all fields.");
+    return false;
+  }
+  alert("Form submitted successfully!");
+  return true;
 }

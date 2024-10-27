@@ -213,6 +213,62 @@
       the body. </h4>
     <button onclick="appPragraph()">Add paragraph</button>
     <div class="receiveChild"></div>
+    <hr />
+    <h2>Question 44</h2>
+    <h4>Write a JavaScript function to remove all list items from an unordered list.</h4>
+    <ul id="myUl">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <button onclick="clearListItems()">Clear List</button>
+    
+    <hr />
+    <h2>Question 45</h2>
+    <h4>Write a JavaScript function to change the text content of a specific HTML 
+      element.  </h4>
+    <button onclick="changeContent(document.getElementById('changeCont'))">Change content</button>
+    <p id="changeCont">This content cheged when you click the button</p>
+
+    <hr />
+    <h2>Question 46</h2>
+    <h4>Write a JavaScript function to toggle a CSS class on an HTML element.  </h4>
+    <button onclick="taggleClass(document.querySelector('.class1'),'class2')">Change class of the following p</button>
+    <p class="class1">Change of styles class</p>
+    <hr />
+    <h2>Question 47</h2>
+    <h4>Write a JavaScript function to count the number of divs on a webpage. </h4>
+    <button onclick="showNumber()">Count the number of all div in this page</button>
+    <p id="length"></p>
+    <hr />
+    <h2>Question 48</h2>
+    <h4>Write a JavaScript function to get the value of a text input field and display it in 
+      a paragraph.  </h4>
+      <label for=""> <input type="text" id="myInput"> <button id="okk">Ok</button></label>
+    <p id="answer48"></p>
+    <hr />
+    <h2>Question 49</h2>
+    <h4>Write a JavaScript function to create a table with 3 rows and 3 columns, and 
+      populate it with numbers of your choice. </h4>
+      <button onclick="createTable()">Create 3x3 Table</button>
+    <div id="answer49"></div>
+    <hr />
+    <h2>Question 50</h2>
+    <h4>Write a JavaScript function to validate a form (check if name, email, and 
+      password fields are filled).</h4>
+      <form onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+      
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+      
+        <button type="submit">Submit</button>
+      </form>
+      
     
     
     <script src="scripts.js"></script>
