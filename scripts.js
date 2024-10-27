@@ -30,7 +30,7 @@ const myNumbers = [
 ];
 const largestNumber = FindGreatestinArr(myNumbers);
 let p2 = document.querySelector(".answer2");
-p2.innerHTML = `the greatest element in [12, 45, 67, 23, 89, 34, 56, 78, 90, 11, 22, 33, 44, 55, 66, 77, 88, 99, 100, 1] is equal to :  ${largestNumber}`;
+p2.innerHTML = `the greatest element in ${myNumbers} is equal to :<br/>  ${largestNumber}`;
 
 //answer3
 function SortingElememntOfArray(array3) {
